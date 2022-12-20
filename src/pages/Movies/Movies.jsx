@@ -1,9 +1,7 @@
+import { SearchForm } from "components/SearchForm/SearchForm";
+
 export const Movies = () => {
   return (
-    <form>
-      <input type="text" />
-      <button>Search</button>
-
-    </form>
+    <SearchForm/>
   );
 };

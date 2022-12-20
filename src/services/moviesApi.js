@@ -20,3 +20,14 @@ export async function fetchMoviesById(movie_id) {
   });
   return response.data;
 }
+
+export async function fetchMoviesByName(query) {
+  const response = await axios('search/movie', {
+    params: {
+      api_key: KEY,
+      query: `${query}`,
+      page: 1,
+    },
+  });
+  return response.data.results;
+}
