@@ -1,6 +1,14 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+export const H1 = styled.h1`
+margin-bottom: 35px;
+margin-left: 45px;
+color: black;
+font-size: 25px;
+font-weight: 400;
+`
+
 export const List = styled.ul`
   list-style: none;
   display: flex;
@@ -37,5 +45,5 @@ export const H2 = styled.h2`
   font-size: 16px;
   max-width: fit-content;
   color: black;
-  padding-left: 5px;
+  padding: 5px;
 `;

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import { fetchTrendingMovies } from 'services/moviesApi';
-import { List, H2, ListItem, A } from './Home.styled';
+import { List, H2, ListItem, A, H1 } from './Home.styled';
 
 export const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -13,7 +13,7 @@ export const Home = () => {
   return (
     movies && (
       <>
-        <h1>Trending today</h1>
+        <H1>Trending today</H1>
         <List>
           {movies.map(({ title, id, poster_path }) => (
             <ListItem key={id}>
