@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { fetchMoviesByName } from 'services/moviesApi';
-
+import { Link } from 'react-router-dom';
 export const SearchForm = () => {
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -26,7 +26,7 @@ export const SearchForm = () => {
         <input type="text" name="moviename" />
         <button type="submit">Search</button>
       </form>
-      {/* <ul>
+      <ul>
           {movies.map(({ title, id, poster_path }) => (
             <li key={id}>
               <Link to={`/movies/${id}`}>
@@ -40,7 +40,7 @@ export const SearchForm = () => {
               </Link>
             </li>
           ))}
-        </ul> */}
+        </ul>
     </>
   );
 };
