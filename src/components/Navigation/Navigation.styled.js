@@ -8,9 +8,9 @@ box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
 export const A = styled(NavLink)`
   text-decoration: none;
   font-size: 20px;
-  color: black;
+  color: grey;
   border: 2px ridge;
-  border-color: black;
+  border-color: grey;
   padding: 8px;
 
   &:hover,

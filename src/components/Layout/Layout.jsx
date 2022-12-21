@@ -1,12 +1,17 @@
-import { Navigation } from "components/Navigation/Navigation";
-import { Outlet } from "react-router-dom";
+import { Navigation } from 'components/Navigation/Navigation';
+import { Outlet } from 'react-router-dom';
+import { Header, Main, Footer, P } from './Layout.styled';
 
 export const Layout = () => {
   return (
     <>
-      <header><Navigation/></header>
-      <main><Outlet/></main>
-      <footer>Footer</footer>
+      <Header>
+        <Navigation />
+      </Header>
+      <Main>
+        <Outlet />
+      </Main>
+      <Footer><P>Copyright © 2022 GoIT. Created by Kamila Nauryzbayeva.</P></Footer>
     </>
   );
 };
