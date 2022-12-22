@@ -52,3 +52,4 @@ export const AddInfoTitle = styled.h3`
 margin-top: 5px;
 margin-bottom: 10px;
 `
+

@@ -1,5 +1,6 @@
 import { useFetchMovieCast } from 'hooks/useFetchMovie';
-import { List, ListItem } from './Cast.styled';
+import { List, ListItem, P } from './Cast.styled';
+import imageNotFound from '../../images/image-not-found.webp';
 
 export const Cast = () => {
   const credits = useFetchMovieCast();
@@ -10,22 +11,19 @@ export const Cast = () => {
         {credits &&
           credits.map(({ id, name, profile_path, character }) => (
             <>
-              <ListItem>
+              <ListItem key={id}>
                 <img
                   src={
                     profile_path === null
-                      ? 'Image not found'
+                      ? imageNotFound
                       : `https://image.tmdb.org/t/p/w500/${profile_path}`
                   }
                   alt={name}
                   width="150"
                   height="230"
                 />
-              </ListItem>
-              <ListItem key={id}>
-                <p>
-                  {name}: {character}
-                </p>
+                <P>{name}</P>
+                <P>Character: {character}</P>
               </ListItem>
             </>
           ))}

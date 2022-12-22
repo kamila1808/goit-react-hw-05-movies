@@ -1,4 +1,5 @@
 import { List, H2, ListItem, A } from './MovieList.styled';
+import imageNotFound from '../../images/image-not-found.webp';
 
 export const MovieList = ({ movies }) => {
   return (
@@ -7,7 +8,11 @@ export const MovieList = ({ movies }) => {
         <ListItem key={id}>
           <A to={`/movies/${id}`}>
             <img
-              src={`https://image.tmdb.org/t/p/w500${poster_path}`}
+              src={
+                poster_path === null
+                  ? imageNotFound
+                  : `https://image.tmdb.org/t/p/w500${poster_path}`
+              }
               alt={title}
               width="300"
               height="400"
