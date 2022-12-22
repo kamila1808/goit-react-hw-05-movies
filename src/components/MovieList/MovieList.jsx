@@ -1,5 +1,7 @@
 import { List, H2, ListItem, A } from './MovieList.styled';
 import imageNotFound from '../../images/image-not-found.webp';
+import PropTypes from 'prop-types';
+
 
 export const MovieList = ({ movies }) => {
   return (
@@ -24,3 +26,13 @@ export const MovieList = ({ movies }) => {
     </List>
   );
 };
+
+MovieList.propTypes = {
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      id: PropTypes.number,
+      poster_path: PropTypes.string,
+    })
+  )
+}

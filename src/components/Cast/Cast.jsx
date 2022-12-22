@@ -1,6 +1,8 @@
 import { useFetchMovieCast } from 'hooks/useFetchMovie';
 import { List, ListItem, P } from './Cast.styled';
 import imageNotFound from '../../images/image-not-found.webp';
+import PropTypes from 'prop-types';
+
 
 export const Cast = () => {
   const credits = useFetchMovieCast();
@@ -31,3 +33,14 @@ export const Cast = () => {
     </>
   );
 };
+
+Cast.propTypes = {
+  credits: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string,
+      profile_path: PropTypes.string,
+      character: PropTypes.string,
+    })
+  )
+}

@@ -1,5 +1,7 @@
 import { useFetchMovieReviews } from 'hooks/useFetchMovie';
 import { List, Wrapper } from './Reviews.styled';
+import PropTypes from 'prop-types';
+
 
 export const Reviews = () => {
   const reviews = useFetchMovieReviews();
@@ -29,3 +31,13 @@ export const Reviews = () => {
     </>
   );
 };
+
+Reviews.propTypes = {
+  reviews: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      author: PropTypes.string,
+      content: PropTypes.string,
+    })
+  )
+}
