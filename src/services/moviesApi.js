@@ -32,11 +32,20 @@ export async function fetchMoviesByName(query) {
   return response.data.results;
 }
 
-export async function fetchMoviesCast(movie_id) {
+export async function fetchMoviesByCast(movie_id) {
   const response = await axios(`/movie/${movie_id}/credits`, {
     params: {
       api_key: KEY,
     },
   });
-  return response.data;
+  return response.data.cast;
+}
+
+export async function fetchMoviesByReviews(movie_id) {
+  const response = await axios(`/movie/${movie_id}/reviews`, {
+    params: {
+      api_key: KEY,
+    },
+  });
+  return response.data.results;
 }
