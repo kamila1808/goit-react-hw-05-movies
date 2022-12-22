@@ -1,5 +1,6 @@
 import { useFetchMovieId } from 'hooks/useFetchMovie';
-import { NavLink, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import { Wrapper, List, DescriptionWrapper, ListItem, A, AddInfoWrapper, AddInfoTitle } from './MovieDetails.styled';
 
 export const MovieDetails = () => {
   const movie = useFetchMovieId();
@@ -7,44 +8,44 @@ export const MovieDetails = () => {
   return (
     movie && (
       <>
-        <ul>
-          <li>
+        <Wrapper>
+          <img
+            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+            alt={movie.title}
+            width="300"
+            height="400"
+          />
+          <DescriptionWrapper>
             <h2>{movie.title}</h2>
-          </li>
-          <li>
-            <img
-              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-              alt={movie.title}
-            />
-          </li>
-          <li>
-            <p>User score: {Math.floor(movie.vote_average * 10)}%</p>
-          </li>
-          <li>
-            <p>Overview: {movie.overview}</p>
-          </li>
-          <li>
             <p>
-              Genres:{' '}
+              <strong>User score:</strong> {Math.floor(movie.vote_average * 10)}
+              %
+            </p>
+            <p>
+              <strong>Overview:</strong> {movie.overview}
+            </p>
+            <p>
+              <strong>Genres: </strong>
               {movie.genres
                 ? movie.genres.map(genre => genre.name).join(', ')
                 : 'No information'}
             </p>
-          </li>
-        </ul>
-        <h3>Additional Information</h3>
-
-        <nav>
-          <ul>
-            <li>
-              <NavLink to="cast">Cast</NavLink>
-            </li>
-            <li>
-              <NavLink to="reviews">Reviews</NavLink>
-            </li>
-          </ul>
-        </nav>
-        <Outlet />
+            <AddInfoWrapper>
+            <AddInfoTitle>Additional Information</AddInfoTitle>
+            <nav>
+              <List>
+                <ListItem>
+                  <A to="cast">Cast</A>
+                </ListItem>
+                <ListItem>
+                  <A to="reviews">Reviews</A>
+                </ListItem>
+              </List>
+            </nav>
+            <Outlet />
+            </AddInfoWrapper>
+          </DescriptionWrapper>
+        </Wrapper>
       </>
     )
   );

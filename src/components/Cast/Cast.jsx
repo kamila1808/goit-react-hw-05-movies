@@ -1,33 +1,35 @@
 import { useFetchMovieCast } from 'hooks/useFetchMovie';
+import { List, ListItem } from './Cast.styled';
 
 export const Cast = () => {
-const credits = useFetchMovieCast();
+  const credits = useFetchMovieCast();
 
   return (
     <>
-      <ul>
+      <List>
         {credits &&
           credits.map(({ id, name, profile_path, character }) => (
             <>
-              <li key={id}>
-                <p>{name}</p>
-              </li>
-              <li> <img
+              <ListItem>
+                <img
                   src={
                     profile_path === null
                       ? 'Image not found'
                       : `https://image.tmdb.org/t/p/w500/${profile_path}`
                   }
                   alt={name}
-                  width="200"
-                  height="300"
-                /></li>
-              <li>
-                <p>{character}</p>
-              </li>
+                  width="150"
+                  height="230"
+                />
+              </ListItem>
+              <ListItem key={id}>
+                <p>
+                  {name}: {character}
+                </p>
+              </ListItem>
             </>
           ))}
-      </ul>
+      </List>
     </>
   );
 };
