@@ -1,7 +1,7 @@
-import { SearchForm } from "components/SearchForm/SearchForm";
+import { SearchForm } from 'components/SearchForm/SearchForm';
 
-export const Movies = () => {
-  return (
-    <SearchForm/>
-  );
+const Movies = () => {
+  return <SearchForm />;
 };
+
+export default Movies;

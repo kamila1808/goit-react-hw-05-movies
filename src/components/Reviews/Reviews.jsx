@@ -3,7 +3,7 @@ import { List, Wrapper } from './Reviews.styled';
 import PropTypes from 'prop-types';
 
 
-export const Reviews = () => {
+ const Reviews = () => {
   const reviews = useFetchMovieReviews();
 
   return (
@@ -31,6 +31,8 @@ export const Reviews = () => {
     </>
   );
 };
+
+export default Reviews;
 
 Reviews.propTypes = {
   reviews: PropTypes.arrayOf(

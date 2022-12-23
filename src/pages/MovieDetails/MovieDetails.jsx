@@ -2,7 +2,7 @@ import { useFetchMovieId } from 'hooks/useFetchMovie';
 import { Outlet } from 'react-router-dom';
 import { Wrapper, List, DescriptionWrapper, ListItem, A, AddInfoWrapper, AddInfoTitle } from './MovieDetails.styled';
 
-export const MovieDetails = () => {
+ const MovieDetails = () => {
   const movie = useFetchMovieId();
 
   return (
@@ -50,3 +50,5 @@ export const MovieDetails = () => {
     )
   );
 };
+
+export default MovieDetails;

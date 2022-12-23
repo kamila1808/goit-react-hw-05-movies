@@ -4,7 +4,7 @@ import imageNotFound from '../../images/image-not-found.webp';
 import PropTypes from 'prop-types';
 
 
-export const Cast = () => {
+ const Cast = () => {
   const credits = useFetchMovieCast();
 
   return (
@@ -33,6 +33,8 @@ export const Cast = () => {
     </>
   );
 };
+
+export default Cast;
 
 Cast.propTypes = {
   credits: PropTypes.arrayOf(

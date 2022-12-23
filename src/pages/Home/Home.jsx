@@ -4,7 +4,7 @@ import { fetchTrendingMovies } from 'services/moviesApi';
 import { H1 } from './Home.styled';
 import { MovieList } from 'components/MovieList/MovieList';
 
-export const Home = () => {
+ const Home = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -21,3 +21,5 @@ export const Home = () => {
     )
   );
 };
+
+export default Home;
