@@ -1,5 +1,5 @@
 import { useFetchMovieReviews } from 'hooks/useFetchMovie';
-import { List, Wrapper } from './Reviews.styled';
+import { List, ListItem } from './Reviews.styled';
 import PropTypes from 'prop-types';
 
 
@@ -14,17 +14,11 @@ import PropTypes from 'prop-types';
         <List>
           {reviews.map(({ id, author, content }) => {
             return (
-              <>
-              <Wrapper>
-                <li key={id}>
+                <ListItem key={id}>
                   <p><strong>Author:</strong> {author}</p>
-                </li>
-                <li>
                   <p>{content}</p>
-                </li>
-                </Wrapper>
-              </>
-            );
+                </ListItem>
+               );
           })}
         </List>
       )}

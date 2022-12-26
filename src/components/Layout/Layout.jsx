@@ -15,7 +15,7 @@ export const Layout = () => {
           </Suspense>
         </Main>
       <Footer>
-        <P>Copyright © 2022 GoIT. Created by Kamila Nauryzbayeva.</P>
+        <P>2022 GoIT. Created by Kamila Nauryzbayeva.</P>
       </Footer>
     </>
   );

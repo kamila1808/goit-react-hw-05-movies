@@ -1,15 +1,17 @@
-import { List, H2, ListItem, A } from './MovieList.styled';
+import { List, H2, ListItem, A, Img } from './MovieList.styled';
 import imageNotFound from '../../images/image-not-found.webp';
 import PropTypes from 'prop-types';
-
+import { useLocation } from 'react-router-dom';
 
 export const MovieList = ({ movies }) => {
+  const location = useLocation();
+
   return (
     <List>
       {movies.map(({ title, id, poster_path }) => (
         <ListItem key={id}>
-          <A to={`/movies/${id}`}>
-            <img
+          <A to={`/movies/${id}`} state={{from:location}}>
+            <Img
               src={
                 poster_path === null
                   ? imageNotFound

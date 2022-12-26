@@ -3,8 +3,7 @@ import { List, ListItem, P } from './Cast.styled';
 import imageNotFound from '../../images/image-not-found.webp';
 import PropTypes from 'prop-types';
 
-
- const Cast = () => {
+const Cast = () => {
   const credits = useFetchMovieCast();
 
   return (
@@ -12,7 +11,6 @@ import PropTypes from 'prop-types';
       <List>
         {credits &&
           credits.map(({ id, name, profile_path, character }) => (
-            <>
               <ListItem key={id}>
                 <img
                   src={
@@ -27,7 +25,6 @@ import PropTypes from 'prop-types';
                 <P>{name}</P>
                 <P>Character: {character}</P>
               </ListItem>
-            </>
           ))}
       </List>
     </>
@@ -44,5 +41,5 @@ Cast.propTypes = {
       profile_path: PropTypes.string,
       character: PropTypes.string,
     })
-  )
-}
+  ),
+};

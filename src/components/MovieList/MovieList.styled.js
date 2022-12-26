@@ -13,8 +13,9 @@ export const List = styled.ul`
 export const ListItem = styled.li`
   max-width: 300px;
   height: 460px;
-  background: white;
   box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  border-radius: 15px;
+
 
   &:hover,
   &:focus {
@@ -40,4 +41,10 @@ export const H2 = styled.h2`
   color: black;
   padding: 8px;
   margin: 0;
-`;
+color: #171a23;
+`
+
+export const Img = styled.img`
+  border-radius: 15px;
+
+`
