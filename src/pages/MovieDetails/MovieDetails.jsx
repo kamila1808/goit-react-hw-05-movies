@@ -56,7 +56,6 @@ const MovieDetails = () => {
 
                 <List>
                   <ListItem>
-                    
                     <A to="cast" state={location.state}>Cast</A>
                   </ListItem>
                   <ListItem>

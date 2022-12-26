@@ -13,9 +13,10 @@ export const Wrapper = styled.div`
 `;
 
 export const List = styled.ul`
-  /* list-style: none; */
+  list-style: none;
   margin-left: 15px;
   padding: 0;
+  display: flex;
 `;
 
 export const DescriptionWrapper = styled.div`
@@ -26,71 +27,77 @@ export const DescriptionWrapper = styled.div`
 `;
 
 export const ListItem = styled.li`
-margin-bottom: 5px;
+  margin-bottom: 5px;
+  margin-right: 15px;
+  padding: 15px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+
+
+
 `
 
 export const A = styled(NavLink)`
-text-decoration: none;
-color: black;
+  text-decoration: none;
+  color: black;
 
-&:hover,
-&:focus{
+  &:hover,
+  &:focus {
     color: orange;
-}
+    
+  }
 
-&:active{
+  &:active {
     color: orange;
-}
-`
+  }
+`;
 
 export const AddInfoWrapper = styled.div`
-border: 1px dotted black;
-padding: 10px;
-`
+  border: 1px dotted black;
+  padding: 10px;
+`;
 
 export const AddInfoTitle = styled.h3`
-margin-top: 5px;
-margin-bottom: 10px;
-`
+  margin-top: 5px;
+  margin-bottom: 10px;
+`;
 
 export const Button = styled.button`
-margin-top: 15px;
-margin-left: 15px;
-padding: 15px;
-cursor: pointer;
-position: relative;
-border: none;
-background-color: transparent; 
-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-box-sizing: border-box;
-transition: all 500ms ease; 
-color: grey;
+  margin-top: 15px;
+  margin-left: 15px;
+  padding: 15px;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-sizing: border-box;
+  transition: all 500ms ease;
+  color: grey;
 
-
-/* border: 2px solid gray; */
-/* background: linear-gradient(45deg, rgb(255, 165, 0), rgb(255, 192, 203), rgb(128, 128, 128)); */
-
-
-&:hover,
-&:focus {
+  &:hover,
+  &:focus {
     color: black;
     font-weight: 800;
+  }
 
-} 
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(
+      45deg,
+      rgb(255, 209, 125, 0.5) 18%,
+      rgb(255, 213, 221, 0.5),
+      rgb(220, 220, 220, 0.5) 77%
+    );
+    /* background: rgba(255,255,255,0.3); */
+    transition: all 500ms ease;
+  }
 
-&:before {
-	content:'';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 0;
-    background: linear-gradient(45deg, rgb(255, 209, 125, 0.5) 18%, rgb(255, 213, 221, 0.5), rgb(220, 220, 220, 0.5) 77%);
-        /* background: rgba(255,255,255,0.3); */
-    	transition: all 500ms ease;
-}
-
-&:hover:before {
-	height: 100%;
-}
+  &:hover:before {
+    height: 100%;
+  }
 `
