@@ -22,7 +22,7 @@ const MovieDetails = () => {
       <>
         <Button
           onClick={() => {
-            navigate(location.state.from);
+            navigate(location?.state?.from ?? '/');
           }}
         >
           Go Back
