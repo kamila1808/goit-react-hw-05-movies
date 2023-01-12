@@ -3,19 +3,15 @@ import { Link } from 'react-router-dom';
 
 export const List = styled.ul`
   list-style: none;
-  display: flex;
-  flex-flow: wrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 35px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  gap: 40px 30px;
+  justify-content: center;
 `;
 
 export const ListItem = styled.li`
-  max-width: 300px;
-  height: 460px;
-  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
-  border-radius: 15px;
-
+  max-width: 250px;
+  /* box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff; */
 
   &:hover,
   &:focus {
@@ -36,15 +32,13 @@ export const H2 = styled.h2`
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   max-width: fit-content;
-  color: black;
-  padding: 8px;
+  color: white;
+  padding: 15px;
   margin: 0;
-color: #171a23;
 `
 
 export const Img = styled.img`
-  border-radius: 15px;
 
 `

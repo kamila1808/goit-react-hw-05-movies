@@ -18,8 +18,8 @@ export const MovieList = ({ movies }) => {
                   : `https://image.tmdb.org/t/p/w500${poster_path}`
               }
               alt={title}
-              width="300"
-              height="400"
+              width="250"
+              height="350"
             />
             <H2>{title}</H2>
           </A>

@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   margin-right: auto;
   margin-left: auto;
   padding: 20px;
-  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  box-shadow:  4px 4px 8px 0px #bebebe, -20px -20px 60px #ffffff;
 `;
 
 export const List = styled.ul`
@@ -31,14 +31,13 @@ export const ListItem = styled.li`
   margin-right: 15px;
   padding: 15px;
   box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-
-
+  background-color: #252525;
 
 `
 
 export const A = styled(NavLink)`
   text-decoration: none;
-  color: black;
+  color: white;
 
   &:hover,
   &:focus {
@@ -68,17 +67,12 @@ export const Button = styled.button`
   cursor: pointer;
   position: relative;
   border: none;
-  background-color: transparent;
+  background-color: #252525;
   box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
   box-sizing: border-box;
   transition: all 500ms ease;
-  color: grey;
+  color: white;
 
-  &:hover,
-  &:focus {
-    color: black;
-    font-weight: 800;
-  }
 
   &:before {
     content: '';
@@ -87,13 +81,7 @@ export const Button = styled.button`
     left: 0;
     width: 100%;
     height: 0;
-    background: linear-gradient(
-      45deg,
-      rgb(255, 209, 125, 0.5) 18%,
-      rgb(255, 213, 221, 0.5),
-      rgb(220, 220, 220, 0.5) 77%
-    );
-    /* background: rgba(255,255,255,0.3); */
+    background: rgba(255, 165, 0, 0.6);
     transition: all 500ms ease;
   }
 
