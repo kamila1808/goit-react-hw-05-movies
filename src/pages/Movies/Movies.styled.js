@@ -32,10 +32,10 @@ export const Input = styled.input`
   @media screen and (min-width: 1200px) {
     width: 350px;
     padding: 15px;
-    /* border: 2px solid gray; */
-    border: none;
-    background-color: #252525;
-    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+
+    &::placeholder {
+      font-size: 15px;
+    }
   }
 
   &:hover,
@@ -79,14 +79,6 @@ export const Button = styled.button`
 
   @media screen and (min-width: 1200px) {
     padding: 15px;
-    cursor: pointer;
-    position: relative;
-    border: none;
-    background-color: transparent;
-    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-    box-sizing: border-box;
-    transition: all 500ms ease;
-    color: white;
     font-size: 14px;
   }
 `;
