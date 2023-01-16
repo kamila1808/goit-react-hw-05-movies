@@ -3,27 +3,72 @@ import { NavLink } from 'react-router-dom';
 
 export const Wrapper = styled.div`
   display: flex;
-  margin-top: 30px;
+  flex-direction: column;
+  margin-top: 25px;
   justify-content: center;
-  max-width: 1000px;
+  max-width: 250px;
   margin-right: auto;
   margin-left: auto;
-  padding: 20px;
+  padding: 15px;
   box-shadow:  4px 4px 8px 0px #bebebe, -20px -20px 60px #ffffff;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+
+    margin-top: 30px;
+  max-width: 1000px;
+  padding: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+
+  margin-top: 30px;
+  max-width: 1000px;
+  padding: 20px;
+  }
 `;
 
 export const List = styled.ul`
-  list-style: none;
-  margin-left: 15px;
+  display: flex;
+  justify-content: center;
+
+
+  @media screen and (min-width: 768px) {
+    margin-left: 15px;
   padding: 0;
   display: flex;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 15px;
+  padding: 0;
+  display: flex;
+  }
+
 `;
 
 export const DescriptionWrapper = styled.div`
-  display: flex;
+display: flex;
+flex-direction: column;
+gap: 10px;
+justify-content: center;
+font-size: 13px;
+margin-top: 10px;
+text-align: center;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   margin-left: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 30px;
+  }
 `;
 
 export const ListItem = styled.li`

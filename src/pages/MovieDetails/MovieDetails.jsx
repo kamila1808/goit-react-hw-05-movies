@@ -31,8 +31,6 @@ const MovieDetails = () => {
           <img
             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
             alt={movie.title}
-            width="300"
-            height="400"
           />
           <DescriptionWrapper>
             <h2>{movie.title}</h2>

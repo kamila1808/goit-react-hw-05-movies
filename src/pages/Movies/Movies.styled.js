@@ -9,17 +9,39 @@ export const Form = styled.form`
 `;
 
 export const Input = styled.input`
-  width: 350px;
-  padding: 15px;
-  /* border: 2px solid gray; */
+  width: 150px;
+  padding: 10px;
   border: none;
   background-color: #252525;
   box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 
   &::placeholder {
     color: white;
+    font-size: 11px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 350px;
+  padding: 15px;
+  /* border: 2px solid gray; */
+  border: none;
+  background-color: #252525;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);  
+
+  &::placeholder {
     font-size: 14px;
   }
+}
+
+  @media screen and (min-width: 1200px) {
+    width: 350px;
+  padding: 15px;
+  /* border: 2px solid gray; */
+  border: none;
+  background-color: #252525;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);  }
+
+
 
   &:hover,
   &:focus {
@@ -29,7 +51,7 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  padding: 15px;
+  padding: 10px;
   cursor: pointer;
   position: relative;
   border: none;
@@ -38,7 +60,9 @@ export const Button = styled.button`
   box-sizing: border-box;
   transition: all 500ms ease;
   color: white;
-  font-size: 14px;
+  font-size: 11px;
+
+  
 
 
   &:before {
@@ -55,4 +79,29 @@ export const Button = styled.button`
   &:hover:before {
     height: 100%;
   }
+
+  @media screen and (min-width: 768px) {
+    padding: 15px;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-sizing: border-box;
+  transition: all 500ms ease;
+  color: white;
+  font-size: 14px;
+}
+
+  @media screen and (min-width: 1200px) {
+    padding: 15px;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-sizing: border-box;
+  transition: all 500ms ease;
+  color: white;
+  font-size: 14px;}
 `;
