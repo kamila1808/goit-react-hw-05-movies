@@ -9,7 +9,8 @@ import {
   A,
   AddInfoWrapper,
   AddInfoTitle,
-  Button
+  Button,
+  Img
 } from './MovieDetails.styled';
 
 const MovieDetails = () => {
@@ -28,7 +29,7 @@ const MovieDetails = () => {
           Go Back
         </Button>
         <Wrapper>
-          <img
+          <Img
             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
             alt={movie.title}
           />

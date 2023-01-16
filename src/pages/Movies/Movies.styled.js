@@ -21,27 +21,22 @@ export const Input = styled.input`
   }
 
   @media screen and (min-width: 768px) {
-    width: 350px;
-  padding: 15px;
-  /* border: 2px solid gray; */
-  border: none;
-  background-color: #252525;
-  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);  
+    width: 300px;
+    padding: 13px;
 
-  &::placeholder {
-    font-size: 14px;
+    &::placeholder {
+      font-size: 13px;
+    }
   }
-}
 
   @media screen and (min-width: 1200px) {
     width: 350px;
-  padding: 15px;
-  /* border: 2px solid gray; */
-  border: none;
-  background-color: #252525;
-  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);  }
-
-
+    padding: 15px;
+    /* border: 2px solid gray; */
+    border: none;
+    background-color: #252525;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  }
 
   &:hover,
   &:focus {
@@ -62,9 +57,6 @@ export const Button = styled.button`
   color: white;
   font-size: 11px;
 
-  
-
-
   &:before {
     content: '';
     position: absolute;
@@ -81,27 +73,20 @@ export const Button = styled.button`
   }
 
   @media screen and (min-width: 768px) {
-    padding: 15px;
-  cursor: pointer;
-  position: relative;
-  border: none;
-  background-color: transparent;
-  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-  box-sizing: border-box;
-  transition: all 500ms ease;
-  color: white;
-  font-size: 14px;
-}
+    padding: 13px;
+    font-size: 12px;
+  }
 
   @media screen and (min-width: 1200px) {
     padding: 15px;
-  cursor: pointer;
-  position: relative;
-  border: none;
-  background-color: transparent;
-  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-  box-sizing: border-box;
-  transition: all 500ms ease;
-  color: white;
-  font-size: 14px;}
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background-color: transparent;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-sizing: border-box;
+    transition: all 500ms ease;
+    color: white;
+    font-size: 14px;
+  }
 `;

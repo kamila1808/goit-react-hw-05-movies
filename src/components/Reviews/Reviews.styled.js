@@ -15,14 +15,13 @@ export const ListItem = styled.div`
   font-size: 11px;
 
   @media screen and (min-width: 768px) {
-    border: 1px dotted grey;
-    margin-bottom: 10px;
     padding: 7px;
+    font-size: 13px;
+
   }
 
   @media screen and (min-width: 1200px) {
-    border: 1px dotted grey;
-    margin-bottom: 10px;
-    padding: 7px;
+    padding: 10px;
+    font-size: 15px;
   }
 `;

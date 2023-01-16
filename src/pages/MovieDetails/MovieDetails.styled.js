@@ -10,21 +10,31 @@ export const Wrapper = styled.div`
   margin-right: auto;
   margin-left: auto;
   padding: 15px;
-  box-shadow:  4px 4px 8px 0px #bebebe, -20px -20px 60px #ffffff;
+  box-shadow: 4px 4px 8px 0px #bebebe, -20px -20px 60px #ffffff;
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
-
-    margin-top: 30px;
-  max-width: 1000px;
-  padding: 20px;
+    margin-top: 28px;
+    max-width: 650px;
+    padding: 18px;
   }
 
   @media screen and (min-width: 1200px) {
+    margin-top: 30px;
+    max-width: 1000px;
+    padding: 20px;
+  }
+`;
 
-  margin-top: 30px;
-  max-width: 1000px;
-  padding: 20px;
+export const Img = styled.img`
+  @media screen and (min-width: 768px) {
+    max-width: 450px;
+    max-height: 400px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 550px;
+    max-height: 500px;
   }
 `;
 
@@ -32,42 +42,37 @@ export const List = styled.ul`
   display: flex;
   justify-content: center;
 
-
   @media screen and (min-width: 768px) {
     margin-left: 15px;
-  padding: 0;
-  display: flex;
+    padding: 0;
+    display: flex;
   }
 
   @media screen and (min-width: 1200px) {
     margin-left: 15px;
-  padding: 0;
-  display: flex;
+    padding: 0;
+    display: flex;
   }
-
 `;
 
 export const DescriptionWrapper = styled.div`
-display: flex;
-flex-direction: column;
-gap: 10px;
-justify-content: center;
-font-size: 13px;
-margin-top: 10px;
-text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 12px;
+  text-align: center;
 
   @media screen and (min-width: 768px) {
-    display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin-left: 30px;
+    flex-wrap: wrap;
+    margin-left: 30px;
+    font-size: 14px;
   }
 
   @media screen and (min-width: 1200px) {
-    display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin-left: 30px;
+    margin-left: 30px;
+    font-size: 16px;
   }
 `;
 
@@ -77,8 +82,7 @@ export const ListItem = styled.li`
   padding: 15px;
   box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
   background-color: #252525;
-
-`
+`;
 
 export const A = styled(NavLink)`
   text-decoration: none;
@@ -87,7 +91,6 @@ export const A = styled(NavLink)`
   &:hover,
   &:focus {
     color: orange;
-    
   }
 
   &:active {
@@ -118,7 +121,6 @@ export const Button = styled.button`
   transition: all 500ms ease;
   color: white;
 
-
   &:before {
     content: '';
     position: absolute;
@@ -133,4 +135,4 @@ export const Button = styled.button`
   &:hover:before {
     height: 100%;
   }
-`
+`;

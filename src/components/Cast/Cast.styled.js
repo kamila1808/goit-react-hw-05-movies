@@ -8,19 +8,15 @@ export const List = styled.ul`
   /* max-width: 680px; */
 
   @media screen and (min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 680px;
-    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 90px);
+    gap: 10px;
+    justify-content: center;
   }
 
   @media screen and (min-width: 1200px) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 680px;
-    padding: 0;
+    grid-template-columns: repeat(auto-fill, 150px);
+gap: 18px;
   }
 `;
 
@@ -37,14 +33,10 @@ export const P = styled.p`
   font-size: 11px;
 
   @media screen and (min-width: 768px) {
-    max-width: fit-content;
-  padding: 4px;
-  margin: 0px;
+    font-size: 13px;
   }
 
   @media screen and (min-width: 1200px) {
-    max-width: fit-content;
-  padding: 4px;
-  margin: 0px;
+    font-size: 15px;
   }
 `;
